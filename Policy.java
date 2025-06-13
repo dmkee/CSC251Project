@@ -9,7 +9,7 @@ public class Policy {
    private double height; // Given in inches
    private double weight; // Given in pounds
    
-   // No-arg constructor
+   /** This is the defualt constructor for the Policy class. It will allow the values to initalize with defualt values. */
    public Policy() {
       policyNumber = 0;
       providerName = "";
@@ -19,8 +19,21 @@ public class Policy {
       smokingStatus = "";
       height = 0.0;
       weight = 0.0;
+   }
       
-   // Full-srg constructor
+   /* Full constructor for the Policy Class
+   
+   @param policyNumber The policy number
+   @param providerName The insurance's provider's name.
+   @param firstName The First name of the policyholder.
+   @param lastName The Last name of the policyholder.
+   @param age The age of the policyholder.
+   @param smokingStatus The smoking Status of the policyHolder.
+   @param height The height of the policyholder in inches.
+   @param weight The weight of the policyholder in pounds.
+ 
+   */
+   
    public Policy(int policyNumber, String providerName, String firstName, String lastName, int age, String smokingStatus, double height, double weight) {
       this.policyNumber = policyNumber;
       this.providerName = providerName;
@@ -32,7 +45,7 @@ public class Policy {
       this.weight = weight;
    }
    
-   // Accessor Methods
+   // Getters and Setters
    public int getPolicyNumber() {
       return policyNumber;
    }
@@ -50,7 +63,7 @@ public class Policy {
    }
    
    public int getPolicyHolderAge() {
-      return PolicyHolderAge;
+      return policyHolderAge;
    }
    
    public String getSmokingStatus() {
@@ -67,7 +80,7 @@ public class Policy {
    
    // Mutator Methods
    public void setPolicyNumber(int policyNumber) {
-      this.policyNumber = policyNUmber;
+      this.policyNumber = policyNumber;
    }
    
    public void setProivderName(String providerName) {
@@ -98,14 +111,23 @@ public class Policy {
       this.weight = weight;
    }
    
-   // Calculation for BMI
+   
+   /* Calculation for BMI for the policyholder
+   
+   @return The BMI value
+   
+   */
    public double calculateBMI() {
       return (weight * 703) / (height * weight);
    }
    
-   // Method to calculate the insuranc policy price
+   /* Method to calculate the insuranc policy price
+   
+   @return The price of the policy.
+   
+   */ 
    public double calculatePolicyPrice() {
-      doble price = 600.0;
+      double price = 600.0;
       
       if (policyHolderAge > 50) {
          price += 75;
