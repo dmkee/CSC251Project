@@ -27,6 +27,6 @@ public class PolicyHolder {
    }
    
    public String toString() {
-      return String.format("PolicyHolder's First Name: %s\nPolicyholder's Last Name: %s\nPolicyholder's Age: %d\n" + "Policyholder's Smoking Status (Y/N): %s\nPolicyHolder's Height: %.1f inches\n" + "PolicyHolder's Weight: %.1f pounds\nPolicyHolder's BMI: %.2f", firstName, lastName, age, (smoker ? "smoker" : "non-smoker"), height, weight, calculateBMI());
+      return String.format("PolicyHolder's First Name: %s\n" + "Policyholder's Last Name: %s\n"  + "Policyholder's Age: %d\n" + "Policyholder's Smoking Status (Y/N): %s\n" + "PolicyHolder's Height: %.1f inches\n" + "PolicyHolder's Weight: %.1f pounds\n" + "PolicyHolder's BMI: %.2f", firstName, lastName, age, (smoker ? "smoker" : "non-smoker"), height, weight, calculateBMI());
    }
 }

@@ -20,13 +20,17 @@ public class Policy {
    
    public int getPolicyNumber() { return policyNumber; }
    public String getProviderName() { return providerName; }
-   public PolicyHolder getPolicyHolder() { return new PolicyHolder(
-      holder.getFirstName(),
-      holder.getLastName(),
-      holder.getAge(),
-      holder.isSmoker(),
-      holder.getHeight(),
-      holdergetWeight()); }
+   
+   public PolicyHolder getPolicyHolder() {
+      return new PolicyHolder(
+         holder.getFirstName(),
+         holder.getLastName(),
+         holder.getAge(),
+         holder.isSmoker(),
+         holder.getHeight(),
+         holder.getWeight()
+      );
+   }
    
    public double calculatePolicyPrice() {
       double basePrice = 600.0;
@@ -38,7 +42,7 @@ public class Policy {
    
    public static int getPolicyCount() { return policyCount; }
    
-   public String toStirng() {
-      return String.format("Policy Number: %d\nProvider Name: %s\n%s\nPolicy Price: $%.2f\n", policyNumber, providerName, holder.toString(), calculatePolicyPrice());
+   public String toString() {
+      return String.format("Policy Number: %d\nProvider Name: %s\n%s\nPolicy Price: $%.2f", policyNumber, providerName, holder.toString(), calculatePolicyPrice());
    }
 }
